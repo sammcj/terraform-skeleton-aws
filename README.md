@@ -1,5 +1,5 @@
 # terraform-skeleton-aws
-Terraform skeleton for AWS projects
+Terraform skeleton monorepo for AWS projects
 
 - [terraform-skeleton-aws](#terraform-skeleton-aws)
   - [Projects](#projects)
