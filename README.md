@@ -49,6 +49,7 @@ EOF
 In order to avoid the chicken and the egg issue with terraform, we create the S3 storage and DynamoDB using a local statefile, and then once the resources exist we transfer the statefile to S3 bucket.
 
 ```shell
+export $PROJECT=projectname
 make stateinit
 make stateplan
 make stateapply
