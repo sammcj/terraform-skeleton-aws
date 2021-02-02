@@ -74,6 +74,7 @@ make init
 - `variables.tf` - Used to initialise all the variables to be passed in via the projects file.
 - `outputs.tf` - For storing any outputs that you may want to make available to other Terraform projects at a later time.
 - `statefile.tf` - For creating the resources needed to create the S3 bucket and DynamoDB used for the statefile.
+- `modules/*.tf` - For creating reusable modules (e.g. postgresql etc...).
 
 ## Git Hooks
 
