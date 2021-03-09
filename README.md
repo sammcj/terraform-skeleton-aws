@@ -29,10 +29,12 @@ Terraform skeleton monorepo for AWS projects
 
 This command will output the SSH URL that you can use to clone the newly created repo.
 
+_Note: This assumes you have a Github personal access token exported to `$GITHUB_TOKEN`._
+
 ```shell
 curl -s -X POST https://api.github.com/repos/sammcj/terraform-skeleton-aws/generate \
 -H "Accept: application/vnd.github.baptiste-preview+json" \
--H "Authorization: token $GIT_TOKEN" \
+-H "Authorization: token $GITHUB_TOKEN" \
 -d @<(cat <<EOF
 {
   "owner": "sammcj",
@@ -49,7 +51,7 @@ EOF
 In order to avoid the chicken and the egg issue with terraform, we create the S3 storage and DynamoDB using a local statefile, and then once the resources exist we transfer the statefile to S3 bucket.
 
 ```shell
-export $PROJECT=projectname
+export PROJECT=projectname
 make stateinit
 make stateplan
 make stateapply
